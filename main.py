@@ -25,6 +25,10 @@ def create_order(e):
     prod3 = document.getElementById("item3")
     prod4 = document.getElementById("item4")
     prod5 = document.getElementById("item5")
+    prod6 = document.getElementById("item6")
+    prod7 = document.getElementById("item7")
+    prod8 = document.getElementById("item8")
+
 
     # Calculate total by multiplying value by checked status (1 or 0)
     # Calculate subtotal, tax, and total
@@ -32,7 +36,10 @@ def create_order(e):
              float(prod2.value) * prod2.checked + 
              float(prod3.value) * prod3.checked + 
              float(prod4.value) * prod4.checked + 
-             float(prod5.value) * prod5.checked)
+             float(prod5.value) * prod5.checked +
+             float(prod6.value) * prod6.checked + 
+             float(prod7.value) * prod7.checked + 
+             float(prod8.value) * prod8.checked)
     
     tax_rate = 0.12  # 12% VAT, no need for excise tax. too complicated
     tax = subtotal * tax_rate
