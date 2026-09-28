@@ -4,10 +4,8 @@ from flask import Flask, render_template_string
 # Create the Flask web application
 app = Flask(__name__)
 
-# ==============================================================================
 # THIS IS THE HTML CODE FOR THE SKU GENERATOR PAGE (Home Page)
 # I used basic HTML and CSS so it looks like a normal student project.
-# ==============================================================================
 sku_page_html = """
 <!DOCTYPE html>
 <html>
@@ -104,9 +102,7 @@ sku_page_html = """
 </html>
 """
 
-# ==============================================================================
 # THIS IS THE HTML CODE FOR THE RECEIPT / MENU PAGE
-# ==============================================================================
 receipt_page_html = """
 <!DOCTYPE html>
 <html>
@@ -172,9 +168,7 @@ receipt_page_html = """
 </html>
 """
 
-# ==============================================================================
 # PYTHON ROUTES (This tells the website which page to show)
-# ==============================================================================
 
 # When the user goes to the home page (/) or /sku, show the SKU page
 @app.route('/')
@@ -187,9 +181,7 @@ def home_page():
 def receipt_page():
     return render_template_string(receipt_page_html)
 
-# ==============================================================================
 # RUN THE WEBSITE
-# ==============================================================================
 if __name__ == '__main__':
     print("Starting the Toy Store website...")
     print("Open your browser and go to: http://127.0.0.1:5000")
